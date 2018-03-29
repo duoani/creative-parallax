@@ -1,0 +1,38 @@
+{
+  "name": "rmi.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node build/dev-server.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --display-modules --config build/webpack.prod.conf.js && npm run make-resource",
+    "make-resource": "node build/make-resource.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "browser-sync-webpack-plugin": "^1.0.1",
+    "chunk-manifest-webpack-plugin": "^1.0.0",
+    "cross-env": "^3.2.3",
+    "css-loader": "^0.23.0",
+    "exports-loader": "^0.6.4",
+    "express": "^4.13.3",
+    "express-favicon": "^1.0.1",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "html-res-webpack-plugin": "1.0.2",
+    "html-webpack-plugin": "^1.7.0",
+    "imports-loader": "^0.7.1",
+    "json-loader": "^0.5.4",
+    "mime": "^1.3.4",
+    "rimraf": "^2.5.0",
+    "style-loader": "^0.13.1",
+    "webpack": "1.12.2",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.6.0"
+  },
+  "dependencies": {
+    "es6-promise": "^4.1.0"
+  }
+}
